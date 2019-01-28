@@ -4,10 +4,12 @@ require('dotenv').config({path: '../.env'});
 
 const app = express();
 
-console.log(process.env.MONGO_URL);
-
 app.get('/', (req, res, next) => {
   res.send("This is book service main endpoint.");
+});
+
+app.post("/book", (req, res, next) => {
+
 });
 
 mongoose.connect(process.env.MONGO_URL, {
